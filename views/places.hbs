@@ -1,22 +1,20 @@
-    {{!-- <img src="{{place.image}}" alt="{{place.name}}" width="200">
-    <h2>{{place.name}}</h2>
-  <hr> --}}
+
 <div class="row">
 {{#each places as |place|}}
     <div class="col s4 m4">
-      <div class="card">
+      <div class="card black">
         <div class="card-image medium">
           <a href="/places/{{place._id}}">
-            <img src="{{place.image}}" alt="{{place.name}}">
+            <img max-height="100px" src="{{place.image}}" alt="{{place.name}}">
           </a>
-          <a href="/places/{{place._id}}">
-            <span class="card-title">{{place.name}}</span>
-          </a>
-          <a href="/places/{{_id}}/edit" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+          <a href="/places/{{_id}}/edit" class="btn-floating halfway-fab waves-effect waves-light blue btn-large"><i class="material-icons">edit</i></a>
         </div>
+          <a href="/places/{{place._id}}">
+            <h4 class="card-title white-text">{{place.name}}</h4>
+          </a>
         <div class="card-action">
-          <a class="white-text btn blue" href="/places/{{_id}}/edit">Edit</a>
-          <a class="white-text btn red" href="/places/{{_id}}/delete">Delete</a>
+          <a class="white-text btn-floating btn-medium red" href="/places/{{_id}}/delete"><i class="material-icons">delete</i></a>
+          <br><br>
         </div>
       </div>
     </div>
